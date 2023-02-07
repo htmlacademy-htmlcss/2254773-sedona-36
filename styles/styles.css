@@ -200,17 +200,15 @@ body {
 
 .button-reset {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
 }
 
-.catalog-filter-section {
+.wraper-main-inner {
   background-image: url("../images/landscape-catalog.jpg");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #ffffff;
   background-color: #82b3d3;
-  padding-top: 180px;
-  margin-top: -180px;
 }
 
 .catalog-filter-group {
