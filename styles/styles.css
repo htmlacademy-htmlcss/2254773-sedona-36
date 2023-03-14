@@ -357,25 +357,27 @@ body {
   box-sizing: border-box;
 }
 
-.recommendation-icon {
+.recommendations-item::before {
+  display: block;
+  content: "";
   margin-bottom: 30px;
   width: 75px;
   height: 72px;
 }
 
-.recommendations-item:first-child .recommendation-icon {
+.recommendations-item:first-child::before {
   background-image: url("../images/house.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.recommendations-item:nth-child(2) .recommendation-icon {
+.recommendations-item:nth-child(2)::before {
   background-image: url("../images/food.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.recommendations-item:last-child .recommendation-icon {
+.recommendations-item:last-child::before {
   background-image: url("../images/present.svg");
   background-repeat: no-repeat;
   background-position: center;
