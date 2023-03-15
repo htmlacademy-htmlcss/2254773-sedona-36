@@ -357,25 +357,27 @@ body {
   box-sizing: border-box;
 }
 
-.recommendation-icon {
+.recommendations-item::before {
+  display: block;
+  content: "";
   margin-bottom: 30px;
   width: 75px;
   height: 72px;
 }
 
-.recommendations-item:first-child .recommendation-icon {
+.recommendations-item:first-child::before {
   background-image: url("../images/house.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.recommendations-item:nth-child(2) .recommendation-icon {
+.recommendations-item:nth-child(2)::before {
   background-image: url("../images/food.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.recommendations-item:last-child .recommendation-icon {
+.recommendations-item:last-child::before {
   background-image: url("../images/present.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1096,6 +1098,33 @@ input[type="number"] {
   text-decoration: none;
 }
 
+.stars {
+  background-image: url("../images/star.svg");
+  height: 37px;
+  background-repeat: repeat-x;
+  background-position-y: center;
+}
+
+.five-star {
+  width: 120px;
+}
+
+.four-star {
+  width: 96px;
+}
+
+.three-star {
+  width: 72px;
+}
+
+.two-star {
+  width: 48px;
+}
+
+.one-star {
+  width: 24px;
+}
+
 .rating {
   display: block;
   width: 140px;
@@ -1108,25 +1137,6 @@ input[type="number"] {
   background-color: #f2f2f2;
   border-radius: 4px;
   text-transform: uppercase;
-}
-
-.star-rating {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  align-items: center;
-}
-
-.star {
-  background-image: url("../images/star.svg");
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 17px;
-  background-position: center;
-}
-
-.star:not(:last-child) {
-  margin-right: 6px;
 }
 
 .newsletter-section-catalog {
@@ -1145,9 +1155,9 @@ input[type="number"] {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: -8px;
+  margin-top: -2px;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 31px;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -1319,7 +1329,7 @@ input[type="number"] {
   vertical-align: top;
   width: 26px;
   height: 26px;
-  margin: -1px 0 -1px   10px;
+  margin: -1px 0 -1px 5px;
   padding: 0;
   border: 0;
   background: none;
@@ -1507,7 +1517,7 @@ input.search-form-field[type="date" i]::-webkit-calendar-picker-indicator {
   position: absolute;
   left: -115px;
   top: 100%;
-  padding-top: 14px;
+  padding-top: 15px;
   text-align: left;
   z-index: 100;
   font-family: "PT Sans", sans-serif;
@@ -1532,7 +1542,7 @@ input.search-form-field[type="date" i]::-webkit-calendar-picker-indicator {
   width: 19px;
   left: 50%;
   margin-left: -10px;
-  top: 5px;
+  top: 6px;
 }
 
 .field-info:hover .tooltip,
